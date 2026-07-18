@@ -1,0 +1,96 @@
+{
+  "name": "metrics-lab",
+  "version": "2.3.17",
+  "service": "MetricsPrimaryBufferManager",
+  "repository": "MetricsPrimaryBufferArchive",
+  "features": {
+    "cacheEnabled": false,
+    "retryLimit": 5,
+    "batchSize": 157,
+    "parallelWorkers": 4
+  },
+  "endpoints": [
+    {
+      "method": "POST",
+      "path": "/api/v1/metrics",
+      "timeoutMs": 2921
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v1/metrics/scheduler",
+      "timeoutMs": 2027
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/metrics/quota",
+      "timeoutMs": 675
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v1/metrics/workflow",
+      "timeoutMs": 3920
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/metrics/workflow",
+      "timeoutMs": 4057
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/metrics/writer",
+      "timeoutMs": 741
+    }
+  ],
+  "middleware": [
+    "MetricsPrimaryBufferFilter",
+    "MetricsPrimaryBufferBuilder"
+  ],
+  "env": {
+    "NODE_ENV": "development",
+    "LOG_LEVEL": "ERROR",
+    "THEME": "metrics"
+  },
+  "notes": [
+    {
+      "id": "entry-2602",
+      "tag": "mapper",
+      "enabled": false
+    },
+    {
+      "id": "entry-6806",
+      "tag": "adapter",
+      "enabled": true
+    },
+    {
+      "id": "entry-5605",
+      "tag": "lite",
+      "enabled": true
+    },
+    {
+      "id": "entry-8651",
+      "tag": "resolver",
+      "enabled": false
+    }
+  ],
+  "schemas": {
+    "metrics_scheduler": {
+      "type": "object",
+      "required": [
+        "id",
+        "label"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    }
+  }
+}

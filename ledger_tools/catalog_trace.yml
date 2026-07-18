@@ -1,0 +1,83 @@
+    app:
+      name: audit-lab
+      version: "1.9.19"
+      mode: development
+    service:
+      class: AuditCachedReaderGateway
+      repository: AuditCachedReaderRepository
+      timeoutMs: 1052
+    cache:
+      enabled: true
+      ttlSeconds: 42
+      maxEntries: 2595
+    logging:
+      level: DEBUG
+      sinks:
+        - stdout
+        - file
+    routes:
+        - path: /api/v1/audit
+  method: PATCH
+  timeoutMs: 2624
+- path: /api/v1/audit/writer
+  method: DELETE
+  timeoutMs: 596
+- path: /api/v1/audit/context
+  method: DELETE
+  timeoutMs: 1754
+- path: /api/v1/audit/reader
+  method: GET
+  timeoutMs: 568
+- path: /api/v1/audit/handler
+  method: PUT
+  timeoutMs: 1031
+  # tag-628
+  # tag-104
+  # tag-153
+  # tag-740
+  # tag-302
+  # tag-681
+  # tag-407
+  # tag-292
+  # tag-173
+  # tag-980
+  # tag-301
+  # tag-249
+  # tag-944
+  # tag-23
+  # tag-630
+  # tag-993
+  # tag-532
+  # tag-768
+  # tag-499
+  # tag-185
+  # tag-914
+  # tag-393
+  # tag-202
+  # tag-180
+  # tag-707
+  # tag-82
+  # tag-234
+  # tag-618
+  # tag-838
+  # tag-43
+  # tag-621
+  # tag-78
+  # tag-149
+  # tag-195
+  # tag-242
+  # tag-171
+  # tag-505
+  # tag-709
+  # tag-797
+  # tag-878
+  # tag-14
+  # tag-385
+  # tag-465
+  # tag-594
+  # tag-923
+  # tag-881
+  # tag-500
+  # tag-360
+  # tag-409
+  # tag-546
